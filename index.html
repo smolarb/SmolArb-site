@@ -271,6 +271,48 @@
       .links{width:100%;justify-content:space-between;gap:10px}
       .panel,.card,.opportunity{padding:20px}
     }
+    ... старые стили ...
+
+/* сюда вставляешь новый код */
+.qr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-box {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-panel {
+  position: relative;
+  z-index: 5;
+  margin: 0 auto;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+
+.qr-box::before,
+.qr-box::after,
+.qr::before,
+.qr::after,
+.line,
+.scan-line,
+.glow-line {
+  display: none !important;
+  content: none !important;
+}
+
+</style>
   </style>
 </head>
 <body>
