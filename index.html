@@ -273,7 +273,6 @@
     }
     ... старые стили ...
 
-/* сюда вставляешь новый код */
 .qr {
   width: 100%;
   display: flex;
@@ -324,22 +323,46 @@
   border-radius: 12px;
   flex-shrink: 0;
 }
-</style>
-</head>
-</style>
+    .brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0;
+  padding: 0;
+}
 
+.brand-logo-wide {
+  display: block;
+  width: 320px;
+  max-width: 72vw;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.brand-text,
+.mark,
+.brand-logo {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .brand-logo-wide {
+    width: 240px;
+    max-width: 78vw;
+  }
+}
+</style>
 </head>
+
 <body>
   <div class="wrap">
     <nav class="nav">
       <a class="brand" href="#top">
-       <img src="logo-top.png" alt="SMOLARB logo" class="brand-logo">
-        <div class="brand-text">
-          <strong>SMOLARB</strong>
-          <span>TECHNOLOGIES INC.</span>
-        </div>
-      </a>
-
+  <img src="logo-header.jpg" alt="SMOLARB Technologies Inc." class="brand-logo-wide">
+</a>
       <div class="links">
         <a href="#vision">Vision</a>
         <a href="#opportunity">Opportunity</a>
