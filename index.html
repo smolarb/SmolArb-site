@@ -531,15 +531,58 @@
       .opportunity{
         padding:20px;
       }
-    }
+    }.brand-text-only{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  width:auto;
+  height:auto;
+  overflow:visible;
+  text-decoration:none;
+  line-height:1;
+}
+
+.brand-title{
+  font-size:44px;
+  font-weight:800;
+  letter-spacing:-0.04em;
+  background:linear-gradient(135deg, #8fd8ff 0%, #43b9ff 45%, #9dff8f 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 18px rgba(67,185,255,.18);
+}
+
+.brand-subtitle{
+  margin-top:6px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#cfe4f7;
+  opacity:.92;
+}
+
+@media (max-width: 768px){
+  .brand-title{
+    font-size:30px;
+  }
+
+  .brand-subtitle{
+    font-size:10px;
+    letter-spacing:.18em;
+  }
+}
   </style>
 </head>
 
 <body>
   <div class="wrap">
     <nav class="nav">
-      <a class="brand" href="#top">
-  <img src="logo-header.png?v=2" alt="SMOLARB Technologies Inc." class="brand-logo-wide">
+      <a class="brand brand-text-only" href="#top">
+  <span class="brand-title">SmolArb</span>
+  <span class="brand-subtitle">Technologies Inc.</span>
 </a>
 
       <div class="links">
