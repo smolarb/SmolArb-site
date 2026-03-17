@@ -323,25 +323,29 @@
   border-radius: 12px;
   flex-shrink: 0;
 }
-    .brand {
-  display: flex;
-  align-items: center;
+   .brand {
+  display: block;
+  width: 590px;
+  height: 135px;
+  overflow: visible;
   text-decoration: none;
-  gap: 0;
-  padding: 0;
 }
 
 .brand-logo-wide {
   display: block;
-  width: 320px;
-  max-width: 72vw;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  object-position: left center;
   background: transparent;
-  border-radius: 0;
-  box-shadow: none;
 }
 
+@media (max-width: 768px) {
+  .brand {
+    width: 320px;
+    height: 82px;
+  }
+}
 .brand-text,
 .mark,
 .brand-logo {
