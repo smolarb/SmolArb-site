@@ -82,19 +82,23 @@
 
     .brand{
       display:block;
-      width:560px;
+      width:420px;
       height:120px;
       overflow:hidden;
       text-decoration:none;
+      position:relative;
       flex-shrink:0;
     }
 
     .brand-logo-wide{
+      position:absolute;
+      left:0;
+      top:50%;
+      width:420px;
+      height:auto;
+      transform:translateY(-50%) scale(2.25);
+      transform-origin:left center;
       display:block;
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      object-position:left center;
       background:transparent;
     }
 
@@ -474,8 +478,13 @@
 
     @media (max-width: 768px){
       .brand{
-        width:320px;
-        height:78px;
+        width:280px;
+        height:80px;
+      }
+
+      .brand-logo-wide{
+        width:280px;
+        transform:translateY(-50%) scale(2.05);
       }
     }
 
