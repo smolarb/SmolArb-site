@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SMOLARB — The Physics of Silence</title>
   <meta name="description" content="SMOLARB investor landing page." />
-<link rel="icon" href="smolarb_favicon_clean.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="smolarb_icon_clean_32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="smolarb_icon_clean_180.png">
+
   <style>
     :root{
       --bg:#04070c;
@@ -82,27 +81,40 @@
       z-index:20;
     }
 
-   .brand {
-  display: block;
-  width: 520px;
-  height: 110px;
-  overflow: hidden;
-  text-decoration: none;
-  position: relative;
-  flex-shrink: 0;
-}
+    .brand-text-only{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:flex-start;
+      width:auto;
+      height:auto;
+      overflow:visible;
+      text-decoration:none;
+      line-height:1;
+      flex-shrink:0;
+      padding-top:4px;
+    }
 
-.brand-logo-wide {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 520px;
-  height: auto;
-  transform: translateY(-50%) scale(1.35);
-  transform-origin: left center;
-  display: block;
-  background: transparent;
-}
+    .brand-title{
+      font-size:44px;
+      font-weight:800;
+      letter-spacing:-0.04em;
+      background:linear-gradient(135deg, #8fd8ff 0%, #43b9ff 45%, #9dff8f 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 18px rgba(67,185,255,.18);
+    }
+
+    .brand-subtitle{
+      margin-top:6px;
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#cfe4f7;
+      opacity:.92;
+    }
 
     .links{
       display:flex;
@@ -248,33 +260,42 @@
       border:1px solid rgba(255,255,255,.08);
     }
 
-    .hero-visual:before{
-      content:"";
+    .hero-video{
       position:absolute;
-      left:-80px;
-      top:54%;
-      width:540px;
-      height:2px;
-      border-radius:999px;
-      background:linear-gradient(90deg,transparent,var(--blue),var(--green),transparent);
-      box-shadow:0 0 28px rgba(67,185,255,.5);
-      transform:rotate(-8deg);
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:24px;
+      display:block;
+      z-index:2;
+      background:#08111b;
     }
 
-    .hero-visual:after{
-      content:"";
+    .hero-video-fallback{
       position:absolute;
-      right:28px;
-      top:28px;
-      width:280px;
-      height:280px;
-      border-radius:50%;
+      inset:0;
+      z-index:1;
       background:
-        radial-gradient(circle at 35% 35%, rgba(255,255,255,.16), transparent 30%),
-        radial-gradient(circle at 60% 60%, rgba(67,185,255,.20), transparent 42%),
-        linear-gradient(135deg, rgba(67,185,255,.14), rgba(120,243,109,.10));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:inset 0 0 40px rgba(255,255,255,.03),0 0 50px rgba(67,185,255,.10);
+        radial-gradient(circle at 30% 30%, rgba(67,185,255,.30), transparent 22%),
+        radial-gradient(circle at 75% 28%, rgba(120,243,109,.18), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+    }
+
+    .hero-video-note{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      z-index:3;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(4,11,18,.65);
+      border:1px solid rgba(255,255,255,.1);
+      color:#dceaf7;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      backdrop-filter:blur(8px);
     }
 
     .grid{
@@ -423,11 +444,6 @@
       overflow:hidden;
       position:relative;
       z-index:5;
-      left:auto !important;
-      right:auto !important;
-      top:auto !important;
-      bottom:auto !important;
-      transform:none !important;
     }
 
     .qr-image{
@@ -479,39 +495,13 @@
     }
 
     @media (max-width: 768px){
-     .brand {
-  display: block;
-  width: 520px;
-  height: 110px;
-  overflow: hidden;
-  text-decoration: none;
-  position: relative;
-  flex-shrink: 0;
-}
+      .brand-title{
+        font-size:30px;
+      }
 
-.brand-logo-wide {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 520px;
-  height: auto;
-  transform: translateY(-50%) scale(1.35);
-  transform-origin: left center;
-  display: block;
-  background: transparent;
-}
-
-@media (max-width: 768px) {
-  .brand {
-    width: 300px;
-    height: 72px;
-  }
-
-  .brand-logo-wide {
-    width: 300px;
-    transform: translateY(-50%) scale(1.2);
-  }
-}
+      .brand-subtitle{
+        font-size:10px;
+        letter-spacing:.18em;
       }
     }
 
@@ -533,59 +523,16 @@
       .opportunity{
         padding:20px;
       }
-    }.brand-text-only{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  width:auto;
-  height:auto;
-  overflow:visible;
-  text-decoration:none;
-  line-height:1;
-}
-
-.brand-title{
-  font-size:44px;
-  font-weight:800;
-  letter-spacing:-0.04em;
-  background:linear-gradient(135deg, #8fd8ff 0%, #43b9ff 45%, #9dff8f 100%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 0 18px rgba(67,185,255,.18);
-}
-
-.brand-subtitle{
-  margin-top:6px;
-  font-size:13px;
-  font-weight:600;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:#cfe4f7;
-  opacity:.92;
-}
-
-@media (max-width: 768px){
-  .brand-title{
-    font-size:30px;
-  }
-
-  .brand-subtitle{
-    font-size:10px;
-    letter-spacing:.18em;
-  }
-}
+    }
   </style>
 </head>
-
 <body>
   <div class="wrap">
     <nav class="nav">
       <a class="brand brand-text-only" href="#top">
-  <span class="brand-title">SmolArb</span>
-  <span class="brand-subtitle">Technologies Inc.</span>
-</a>
+        <span class="brand-title">SmolArb</span>
+        <span class="brand-subtitle">Technologies Inc.</span>
+      </a>
 
       <div class="links">
         <a href="#vision">Vision</a>
@@ -613,7 +560,13 @@
       </div>
 
       <div class="panel">
-        <div class="hero-visual"></div>
+        <div class="hero-visual">
+          <div class="hero-video-fallback"></div>
+          <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="intro.mp4" type="video/mp4">
+          </video>
+          <div class="hero-video-note">Replace with intro.mp4</div>
+        </div>
       </div>
     </section>
 
