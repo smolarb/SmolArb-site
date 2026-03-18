@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,8 +187,8 @@
 
     .hero{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:28px;
+      grid-template-columns:minmax(0, 1fr) minmax(520px, 1.08fr);
+      gap:24px;
       align-items:center;
       padding:64px 0 40px;
     }
@@ -257,6 +258,15 @@
       padding:28px;
       overflow:hidden;
       box-shadow:0 12px 40px rgba(0,0,0,.28);
+      backdrop-filter:blur(14px);
+    }
+
+    .hero-panel{
+      padding:34px;
+      border-radius:32px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.018)),
+        rgba(9,16,28,.82);
     }
 
     .panel:before{
@@ -272,22 +282,26 @@
       pointer-events:none;
     }
 
-    .hero-visual {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 28px;
-}
+    .hero-visual{
+      position:relative;
+      width:100%;
+      aspect-ratio:16 / 9;
+      min-height:340px;
+      overflow:hidden;
+      border-radius:26px;
+      background:rgba(1,7,14,.42);
+      border:1px solid rgba(255,255,255,.07);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.03);
+    }
 
-.hero-video-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
+    .hero-video-frame{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
 
     .hero-video-fallback{
       position:absolute;
@@ -506,8 +520,12 @@
         grid-template-columns:1fr;
       }
 
+      .hero-panel{
+        padding:24px;
+      }
+
       .hero-visual{
-        height:260px;
+        min-height:260px;
       }
     }
 
@@ -576,7 +594,7 @@
         </div>
       </div>
 
-      <div class="panel">
+      <div class="panel hero-panel">
   <div class="hero-visual">
     <iframe
       class="hero-video-frame"
@@ -584,6 +602,7 @@
       title="SMOLARB video"
       frameborder="0"
       allow="autoplay; fullscreen; picture-in-picture"
+      referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
     </iframe>
   </div>
