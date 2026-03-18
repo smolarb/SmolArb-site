@@ -323,13 +323,17 @@
     .hero-visual::before{
       content:"";
       position:absolute;
-      top:0;
-      left:0;
-      width:190px;
-      height:86px;
+      top:30px;
+      left:8px;
+      width:146px;
+      height:78px;
       z-index:2;
-      background:linear-gradient(135deg, rgba(4,10,18,.84), rgba(4,10,18,.48) 55%, transparent 100%);
-      backdrop-filter:blur(4px);
+      border-radius:18px;
+      background:linear-gradient(135deg, rgba(4,10,18,.94), rgba(4,10,18,.82) 52%, rgba(4,10,18,.22) 100%);
+      backdrop-filter:blur(12px) saturate(.9);
+      box-shadow:
+        0 10px 26px rgba(0,0,0,.26),
+        inset 0 1px 0 rgba(255,255,255,.05);
       pointer-events:none;
     }
 
