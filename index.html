@@ -318,6 +318,11 @@
       box-shadow:
         inset 0 0 0 1px rgba(255,255,255,.025),
         0 18px 40px rgba(0,0,0,.18);
+      isolation:isolate;
+      --video-scale-x: 118%;
+      --video-scale-y: 122%;
+      --video-shift-x: -9%;
+      --video-shift-y: -11%;
     }
 
     .hero-visual::before{
@@ -345,9 +350,10 @@
 
     .hero-video-frame{
       position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
+      top:var(--video-shift-y);
+      left:var(--video-shift-x);
+      width:var(--video-scale-x);
+      height:var(--video-scale-y);
       border:0;
       display:block;
     }
