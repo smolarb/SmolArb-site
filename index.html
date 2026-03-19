@@ -133,7 +133,7 @@
 
     .brand-subtitle{
       margin-top:6px;
-      font-size:13px;
+      font-size:14px;
       font-weight:600;
       letter-spacing:.22em;
       text-transform:uppercase;
@@ -160,7 +160,7 @@
     .btn-nav-request{
       min-height:42px;
       padding:0 16px;
-      font-size:13px;
+      font-size:14px;
       letter-spacing:.01em;
       box-shadow:0 10px 24px rgba(67,185,255,.16);
     }
@@ -321,20 +321,8 @@
     }
 
     .hero-visual::before{
-      content:"";
-      position:absolute;
-      top:30px;
-      left:8px;
-      width:146px;
-      height:78px;
-      z-index:2;
-      border-radius:18px;
-      background:linear-gradient(135deg, rgba(4,10,18,.94), rgba(4,10,18,.82) 52%, rgba(4,10,18,.22) 100%);
-      backdrop-filter:blur(12px) saturate(.9);
-      box-shadow:
-        0 10px 26px rgba(0,0,0,.26),
-        inset 0 1px 0 rgba(255,255,255,.05);
-      pointer-events:none;
+      content:none;
+      display:none;
     }
 
     .hero-visual::after{
@@ -354,6 +342,32 @@
       height:100%;
       border:0;
       display:block;
+    }
+
+    .hero-brand-overlay{
+      position:absolute;
+      top:78px;
+      left:10px;
+      z-index:4;
+      pointer-events:none;
+      display:inline-flex;
+      align-items:center;
+      min-height:50px;
+      padding:10px 22px;
+      border-radius:14px;
+      background:rgba(10,16,26,.52);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:
+        0 10px 26px rgba(0,0,0,.24),
+        inset 0 1px 0 rgba(255,255,255,.06);
+      backdrop-filter:blur(18px) saturate(115%);
+      -webkit-backdrop-filter:blur(18px) saturate(115%);
+      color:rgba(245,248,255,.96);
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:none;
+      line-height:1;
     }
 
     .hero-video-fallback{
@@ -614,7 +628,21 @@
         padding:20px;
       }
     }
-  </style>
+  
+    @media (max-width: 768px){
+      .hero-brand-overlay{
+        top:58px;
+        left:8px;
+        min-height:44px;
+        padding:9px 16px;
+        border-radius:12px;
+        font-size:14px;
+        font-weight:800;
+        letter-spacing:.06em;
+      }
+    }
+
+</style>
 </head>
 <body>
   <div class="wrap">
@@ -651,9 +679,10 @@
 
       <div class="panel hero-panel">
   <div class="hero-visual">
+    <div class="hero-brand-overlay">SmolArb</div>
     <iframe
       class="hero-video-frame"
-      src="https://player.vimeo.com/video/1174364667?loop=1&autopause=0&title=0&byline=0&portrait=0&badge=0&dnt=1"
+      src="https://player.vimeo.com/video/1174969014?loop=1&autopause=0&title=0&byline=0&portrait=0&badge=0&dnt=1"
       title="SMOLARB video"
       frameborder="0"
       allow="autoplay; fullscreen; picture-in-picture"
