@@ -344,31 +344,6 @@
       display:block;
     }
 
-    .hero-brand-overlay{
-      position:absolute;
-      top:78px;
-      left:10px;
-      z-index:4;
-      pointer-events:none;
-      display:inline-flex;
-      align-items:center;
-      min-height:50px;
-      padding:10px 22px;
-      border-radius:14px;
-      background:rgba(10,16,26,.52);
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:
-        0 10px 26px rgba(0,0,0,.24),
-        inset 0 1px 0 rgba(255,255,255,.06);
-      backdrop-filter:blur(18px) saturate(115%);
-      -webkit-backdrop-filter:blur(18px) saturate(115%);
-      color:rgba(245,248,255,.96);
-      font-size:18px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:none;
-      line-height:1;
-    }
 
     .hero-video-fallback{
       position:absolute;
@@ -630,17 +605,7 @@
     }
   
     @media (max-width: 768px){
-      .hero-brand-overlay{
-        top:58px;
-        left:8px;
-        min-height:44px;
-        padding:9px 16px;
-        border-radius:12px;
-        font-size:14px;
-        font-weight:800;
-        letter-spacing:.06em;
-      }
-    }
+
 
 </style>
 </head>
@@ -679,7 +644,6 @@
 
       <div class="panel hero-panel">
   <div class="hero-visual">
-    <div class="hero-brand-overlay">SmolArb</div>
     <iframe
       class="hero-video-frame"
       src="https://player.vimeo.com/video/1174969014?loop=1&autopause=0&title=0&byline=0&portrait=0&badge=0&dnt=1"
