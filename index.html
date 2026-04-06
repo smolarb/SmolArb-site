@@ -234,27 +234,30 @@
 
     .hero{
       display:grid;
-      grid-template-columns:minmax(0, .95fr) minmax(560px, 1.05fr);
+      grid-template-columns:1fr;
       gap:28px;
-      align-items:center;
+      align-items:start;
       padding:64px 0 36px;
     }
 
     .kicker{
-      color:var(--muted);
-      font-size:12px;
-      letter-spacing:.18em;
-      text-transform:uppercase;
       display:flex;
+      width:fit-content;
       align-items:center;
-      gap:10px;
-      margin-bottom:18px;
+      justify-content:center;
+      min-height:34px;
+      padding:0 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      color:#dceaf7;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin:0 auto 18px;
     }
     .kicker:before{
-      content:"";
-      width:42px;
-      height:1px;
-      background:linear-gradient(90deg,transparent,var(--blue),transparent);
+      content:none;
     }
 
     h1{
@@ -283,9 +286,10 @@
     .copy{
       margin:18px 0 0;
       color:var(--muted);
-      font-size:16px;
-      line-height:1.75;
-      max-width:760px;
+      font-size:clamp(18px,2.1vw,24px);
+      line-height:1.55;
+      max-width:900px;
+      text-align:center;
     }
 
     .hero-note{
@@ -314,6 +318,32 @@
       gap:12px;
       flex-wrap:wrap;
       margin-top:28px;
+    }
+
+    .hero > div:first-child{
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .hero > div:first-child .kicker,
+    .hero > div:first-child h1,
+    .hero > div:first-child .sub,
+    .hero > div:first-child .copy{
+      max-width:900px;
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+
+    .hero > div:first-child .kicker{
+      justify-content:center;
+      align-self:center;
+    }
+
+    .hero > div:first-child .hero-note{
+      justify-content:center;
     }
 
     .panel{
@@ -345,7 +375,7 @@
     .hero-panel{
       padding:22px;
       border-radius:34px;
-      min-height:520px;
+      min-height:auto;
       display:flex;
       align-items:center;
       background:
@@ -354,6 +384,9 @@
       box-shadow:
         0 22px 60px rgba(0,0,0,.34),
         inset 0 1px 0 rgba(255,255,255,.03);
+      max-width:860px;
+      width:100%;
+      margin:0 auto;
     }
 
     .hero-visual{
@@ -401,23 +434,26 @@
     }
 
     .demo-intro{
-      margin:16px 0 18px;
-      padding:16px 18px;
+      margin:16px auto 18px;
+      padding:18px 22px;
       border-radius:18px;
       background:rgba(255,255,255,.03);
       border:1px solid rgba(255,255,255,.08);
-      color:#dceaf6;
-      line-height:1.72;
-      font-size:15px;
-      max-width:860px;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:clamp(18px,2.1vw,24px);
+      font-weight:400;
+      max-width:900px;
+      text-align:center;
     }
 
     .demo-intro strong{
-      color:#ffffff;
+      color:inherit;
       display:block;
-      margin-bottom:6px;
-      font-size:15px;
-      letter-spacing:.03em;
+      margin-bottom:10px;
+      font-size:clamp(18px,2.1vw,24px);
+      font-weight:400;
+      letter-spacing:.01em;
     }
 
     .media-block{
@@ -491,11 +527,32 @@
 
     .section{padding:28px 0}
     .section-kicker{
-      color:var(--muted);
+      display:flex;
+      width:fit-content;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:0 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      color:#dceaf7;
       font-size:12px;
-      letter-spacing:.18em;
+      letter-spacing:.08em;
       text-transform:uppercase;
-      margin-bottom:10px;
+      margin:0 auto 14px;
+      text-align:center;
+    }
+
+    .section h2{
+      text-align:center;
+    }
+
+    .plain-lines,
+    .demo-intro,
+    .section-intro{
+      margin-left:auto;
+      margin-right:auto;
     }
 
     h2{
@@ -505,11 +562,13 @@
     }
 
     .section-intro{
-      margin:12px 0 0;
-      max-width:760px;
+      margin:12px auto 0;
+      max-width:900px;
       color:var(--muted);
-      line-height:1.75;
-      font-size:16px;
+      line-height:1.55;
+      font-size:clamp(18px,2.1vw,24px);
+      font-weight:400;
+      text-align:center;
     }
 
     .grid-3,
@@ -595,14 +654,17 @@
     }
 
     .plain-lines p{
-      margin:0 0 14px;
-      color:#dceaf6;
-      line-height:1.8;
-      font-size:16px;
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:clamp(18px,2.1vw,24px);
+      font-weight:400;
+      text-align:center;
     }
 
     .plain-lines strong{
-      color:#ffffff;
+      color:inherit;
+      font-weight:inherit;
     }
 
 
@@ -654,8 +716,9 @@
     .founder-copy{
       margin:0;
       color:var(--muted);
-      line-height:1.78;
-      font-size:15px;
+      line-height:1.55;
+      font-size:clamp(18px,2.1vw,24px);
+      font-weight:400;
     }
 
     @media (min-width: 1024px){
@@ -675,8 +738,10 @@
     .strengths li{
       padding-left:18px;
       position:relative;
-      color:#dceaf6;
-      line-height:1.65;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:clamp(18px,2.1vw,24px);
+      font-weight:400;
     }
 
     .strengths li:before{
@@ -805,7 +870,25 @@
       font-weight:600;
     }
 
-    @media (max-width: 1100px){
+    
+    @media (min-width: 981px){
+      .hero{
+        grid-template-columns:1fr;
+        gap:34px;
+        padding:72px 0 26px;
+      }
+
+      .hero-visual{
+        height:420px;
+        min-height:420px;
+      }
+
+      #benefits{
+        padding-top:16px;
+      }
+    }
+
+@media (max-width: 1100px){
       .grid-4{grid-template-columns:repeat(2,1fr)}
     }
 
@@ -1027,6 +1110,7 @@
             <h2 id="contact-heading">Want to learn more?</h2>
             <p class="section-intro" style="margin-top:0;">For product questions, partnership inquiries, or general interest, contact us directly.</p>
             <a class="mail" href="mailto:info@smolarb.com?subject=ClearStay%20Glass%20Film%20Inquiry">info@smolarb.com</a>
+          <div style="margin-top:8px; color:#a7bfd6; font-size:15px; line-height:1.5;">Based in Alberta, Canada</div>
 
             <ul class="contact-list">
               <li>General questions about ClearStay</li>
