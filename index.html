@@ -49,12 +49,12 @@
           {
             "@type": "Person",
             "name": "Dmytro Smolynets",
-            "jobTitle": "Co-Founder, Chief Executive Officer"
+            "jobTitle": ", Chief Executive Officer"
           },
           {
             "@type": "Person",
             "name": "Evgenii Arbuz",
-            "jobTitle": "Co-Founder, Chief Technology Officer"
+            "jobTitle": ", Chief Technology Officer"
           }
         ]
       },
@@ -207,7 +207,7 @@
     .btn{
       display:inline-flex;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       min-height:46px;
       padding:0 18px;
       border-radius:999px;
@@ -244,7 +244,7 @@
       display:flex;
       width:fit-content;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       min-height:34px;
       padding:0 14px;
       border-radius:999px;
@@ -254,7 +254,7 @@
       font-size:12px;
       letter-spacing:.08em;
       text-transform:uppercase;
-      margin:0 auto 18px;
+      margin:0 0 18px;
     }
     .kicker:before{
       content:none;
@@ -288,8 +288,8 @@
       color:var(--muted);
       font-size:clamp(18px,2.1vw,24px);
       line-height:1.55;
-      max-width:900px;
-      text-align:center;
+      max-width:1120px;
+      text-align:left;
     }
 
     .hero-note{
@@ -321,29 +321,50 @@
     }
 
     .hero > div:first-child{
-      text-align:center;
+      text-align:left;
       display:flex;
       flex-direction:column;
-      align-items:center;
-    }
-
-    .hero > div:first-child .kicker,
-    .hero > div:first-child h1,
-    .hero > div:first-child .sub,
-    .hero > div:first-child .copy{
-      max-width:900px;
-      margin-left:auto;
-      margin-right:auto;
-      text-align:center;
+      align-items:flex-start;
+      width:100%;
+      max-width:1280px;
+      margin:0;
     }
 
     .hero > div:first-child .kicker{
-      justify-content:center;
-      align-self:center;
+      max-width:900px;
+      margin-left:0;
+      margin-right:0;
+      text-align:left;
+      justify-content:flex-start;
+      align-self:flex-start;
+    }
+
+    .hero > div:first-child h1{
+      max-width:920px;
+      width:100%;
+      margin-left:0;
+      margin-right:0;
+      text-align:left;
+    }
+
+    .hero > div:first-child .sub{
+      max-width:900px;
+      width:100%;
+      margin-left:0;
+      margin-right:0;
+      text-align:left;
+    }
+
+    .hero > div:first-child .copy{
+      max-width:1280px;
+      width:100%;
+      margin-left:0;
+      margin-right:0;
+      text-align:left;
     }
 
     .hero > div:first-child .hero-note{
-      justify-content:center;
+      justify-content:flex-start;
     }
 
     .panel{
@@ -444,7 +465,7 @@
       font-size:clamp(18px,2.1vw,24px);
       font-weight:400;
       max-width:900px;
-      text-align:center;
+      text-align:left;
     }
 
     .demo-intro strong{
@@ -530,7 +551,7 @@
       display:flex;
       width:fit-content;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       min-height:34px;
       padding:0 14px;
       border-radius:999px;
@@ -540,19 +561,19 @@
       font-size:12px;
       letter-spacing:.08em;
       text-transform:uppercase;
-      margin:0 auto 14px;
-      text-align:center;
+      margin:0 0 14px;
+      text-align:left;
     }
 
     .section h2{
-      text-align:center;
+      text-align:left;
     }
 
     .plain-lines,
     .demo-intro,
     .section-intro{
-      margin-left:auto;
-      margin-right:auto;
+      margin-left:0;
+      margin-right:0;
     }
 
     h2{
@@ -568,7 +589,7 @@
       line-height:1.55;
       font-size:clamp(18px,2.1vw,24px);
       font-weight:400;
-      text-align:center;
+      text-align:left;
     }
 
     .grid-3,
@@ -659,12 +680,12 @@
       line-height:1.55;
       font-size:clamp(18px,2.1vw,24px);
       font-weight:400;
-      text-align:center;
+      text-align:left;
     }
 
     .plain-lines strong{
-      color:inherit;
-      font-weight:inherit;
+      color:#e6f0fa;
+      font-weight:700;
     }
 
 
@@ -678,7 +699,7 @@
       aspect-ratio: 4 / 5;
       display:flex;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       padding:12px;
     }
 
@@ -716,8 +737,8 @@
     .founder-copy{
       margin:0;
       color:var(--muted);
-      line-height:1.55;
-      font-size:clamp(18px,2.1vw,24px);
+      line-height:1.78;
+      font-size:15px;
       font-weight:400;
     }
 
@@ -739,8 +760,8 @@
       padding-left:18px;
       position:relative;
       color:var(--muted);
-      line-height:1.55;
-      font-size:clamp(18px,2.1vw,24px);
+      line-height:1.65;
+      font-size:15px;
       font-weight:400;
     }
 
@@ -791,7 +812,7 @@
       width:100%;
       min-height:290px;
       display:flex;
-      justify-content:center;
+      justify-content:flex-start;
       align-items:center;
       position:relative;
       border-radius:24px;
@@ -808,7 +829,7 @@
       margin:0 auto;
       display:flex;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       background:rgba(3,10,16,.92);
       border-radius:28px;
       box-shadow:
@@ -836,8 +857,8 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      justify-content:center;
-      text-align:center;
+      justify-content:flex-start;
+      text-align:left;
       background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.10);
       border-radius:18px;
@@ -858,7 +879,7 @@
 
     footer{
       padding:24px 0 36px;
-      text-align:center;
+      text-align:left;
       color:var(--muted);
       font-size:14px;
     }
@@ -876,6 +897,7 @@
         grid-template-columns:1fr;
         gap:34px;
         padding:72px 0 26px;
+        justify-items:start;
       }
 
       .hero-visual{
@@ -1073,7 +1095,7 @@
             <div class="founder-photo-wrap">
               <img src="images/image-2.jpg" alt="Portrait of Dmytro Smolynets" class="founder-photo">
             </div>
-            <div class="role">Co-Founder · CEO</div>
+            <div class="role">CEO</div>
             <h3 class="founder-name">Dmytro Smolynets</h3>
             <p class="founder-copy">
               Dmytro Smolynets leads the business side of the company, including strategy, partnerships, communication, and growth. He focuses on turning the vision behind ClearStay into a real company with real market traction. He also brings an engineering background in Radio Electronic Devices Engineering from the National Technical University of Ukraine “Kyiv Polytechnic Institute”, with a Canadian equivalency of a Master’s degree.
@@ -1089,7 +1111,7 @@
             <div class="founder-photo-wrap">
               <img src="images/image-3.jpg" alt="Portrait of Evgenii Arbuz" class="founder-photo">
             </div>
-            <div class="role">Co-Founder · CTO</div>
+            <div class="role">CTO</div>
             <h3 class="founder-name">Evgenii Arbuz</h3>
             <p class="founder-copy">
               Evgenii Arbuz leads the technical side of the company, including product development, engineering, prototyping, and testing. He focuses on turning the idea behind ClearStay into a practical and scalable surface solution, bringing practical technical experience.
