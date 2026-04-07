@@ -480,7 +480,7 @@
     }
 
     .demo-intro{
-      margin:16px auto 18px;
+      margin:16px 0 18px;
       padding:18px 22px;
       border-radius:18px;
       background:rgba(255,255,255,.03);
@@ -489,7 +489,8 @@
       line-height:1.55;
       font-size:clamp(18px,2.1vw,24px);
       font-weight:400;
-      max-width:900px;
+      max-width:1000px;
+      width:100%;
       text-align:left;
     }
 
@@ -613,8 +614,9 @@
     }
 
     .section-intro{
-      margin:12px auto 0;
-      max-width:900px;
+      margin:12px 0 0;
+      max-width:1000px;
+      width:100%;
       color:var(--muted);
       line-height:1.42;
       font-size:clamp(18px,2.1vw,24px);
@@ -699,10 +701,8 @@
       .demo-intro{
         max-width: min(1000px, calc(100% - 8px)) !important;
         width: min(1000px, calc(100% - 8px));
-      }
-
-      .demo-intro{
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
     }
 
