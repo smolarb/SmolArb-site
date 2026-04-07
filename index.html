@@ -846,6 +846,74 @@
       line-height:1.55;
     }
 
+    .contact-meta{
+      margin-top:8px;
+      color:#a7bfd6;
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    #contact .section-kicker,
+    #contact h2,
+    #contact .section-intro,
+    #contact .mail,
+    #contact .contact-meta,
+    #contact .contact-list li,
+    #contact .btn,
+    #contact .qr-fallback,
+    #contact .qr-fallback strong,
+    #contact .qr-fallback span{
+      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+
+    #contact h2{
+      letter-spacing:-0.03em;
+    }
+
+    #contact .section-intro{
+      font-size:16px;
+      line-height:1.52;
+      color:#c9dceb;
+      max-width:680px;
+    }
+
+    #contact .mail{
+      font-size:18px;
+      font-weight:700;
+      letter-spacing:0;
+    }
+
+    #contact .contact-meta{
+      font-size:15px;
+      color:#b2c8da;
+    }
+
+    #contact .contact-list li{
+      font-size:15px;
+      line-height:1.56;
+    }
+
+    #contact .btn{
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:0;
+    }
+
+    #contact .qr-fallback{
+      text-align:center;
+      justify-content:center;
+    }
+
+    #contact .qr-fallback strong{
+      font-size:20px;
+      font-weight:700;
+    }
+
+    #contact .qr-fallback span{
+      font-size:14px;
+      line-height:1.45;
+    }
+
     .qr{
       width:100%;
       min-height:320px;
@@ -943,10 +1011,17 @@
     }
 
     
-    @media (min-width: 1024px){
+
+    @media (min-width: 981px){
       .hero > div:first-child .sub{
-        max-width: 1280px;
-        white-space: nowrap;
+        max-width:min(100%, 980px);
+        white-space:normal !important;
+        overflow-wrap:anywhere;
+      }
+
+      .hero > div:first-child .copy{
+        max-width:min(100%, 1040px);
+        overflow-wrap:anywhere;
       }
     }
 
@@ -1223,7 +1298,7 @@
             <h2 id="contact-heading">Want to learn more?</h2>
             <p class="section-intro" style="margin-top:0;">For product questions, partnership inquiries, or general interest, contact us directly.</p>
             <a class="mail" href="mailto:info@smolarb.com?subject=ClearStay%20Glass%20Film%20Inquiry">info@smolarb.com</a>
-          <div style="margin-top:8px; color:#a7bfd6; font-size:15px; line-height:1.5;">Based in Alberta, Canada</div>
+          <div class="contact-meta">Based in Alberta, Canada</div>
 
             <ul class="contact-list">
               <li>General questions about ClearStay</li>
