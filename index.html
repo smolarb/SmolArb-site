@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,12 +55,12 @@
           {
             "@type": "Person",
             "name": "Dmytro Smolynets",
-            "jobTitle": ", Chief Executive Officer"
+            "jobTitle": "Chief Executive Officer"
           },
           {
             "@type": "Person",
             "name": "Evgenii Arbuz",
-            "jobTitle": ", Chief Technology Officer"
+            "jobTitle": "Chief Technology Officer"
           }
         ]
       },
@@ -131,6 +132,21 @@
     }
 
     a{color:inherit}
+    .sub,
+    .copy,
+    .demo-intro,
+    .section-intro,
+    .plain-lines p,
+    .card p,
+    .founder-copy,
+    .contact-meta,
+    .contact-list li,
+    .list li{
+      text-align:justify;
+      text-align-last:left;
+      text-justify:inter-word;
+    }
+
     .wrap{
       width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
@@ -784,8 +800,18 @@
     }
 
     @media (min-width: 1024px){
+      .founders{
+        align-items:stretch;
+      }
+
+      .founders > .panel{
+        height:100%;
+        display:flex;
+        flex-direction:column;
+      }
+
       .founders article:nth-child(2){
-        padding-bottom: 74px;
+        padding-bottom: 28px;
       }
     }
 
@@ -832,6 +858,25 @@
       color:#e7f7ff;
       font-size:18px;
       letter-spacing:-0.01em;
+    }
+
+
+    .contact-identity{
+      margin-top:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .contact-identity .mail{
+      display:block;
+      margin-top:0;
+    }
+
+    .contact-identity .contact-meta{
+      margin-top:10px;
     }
 
     .contact-list{
@@ -886,11 +931,15 @@
       font-size:18px;
       font-weight:700;
       letter-spacing:0;
+      text-align:center;
     }
 
     #contact .contact-meta{
-      font-size:15px;
-      color:#b2c8da;
+      font-size:18px;
+      font-weight:700;
+      color:#e7f7ff;
+      letter-spacing:0;
+      text-align:center;
     }
 
     #contact .contact-list li{
@@ -1035,6 +1084,18 @@
       }
     }
 
+    @media (min-width: 1024px){
+      h1#hero-title{
+        font-size:clamp(38px, 4.9vw, 68px);
+        white-space:nowrap;
+      }
+
+      h1#hero-title .hero-line-1,
+      h1#hero-title .hero-line-2{
+        display:inline;
+      }
+    }
+
     @media (min-width: 981px){
       .hero{
         grid-template-columns:1fr;
@@ -1146,6 +1207,11 @@
         line-height:.98;
       }
 
+      h1#hero-title{
+        font-size:clamp(42px, 8.6vw, 56px);
+        line-height:.94;
+      }
+
       .hero-line-1{
         white-space:nowrap;
       }
@@ -1174,6 +1240,304 @@
         padding:20px;
       }
     }
+
+
+    /* Final text alignment override for descriptive text on desktop and mobile */
+    .sub,
+    .copy,
+    .demo-intro,
+    .section-intro,
+    .plain-lines p,
+    .card p,
+    .founder-copy,
+    .contact-meta,
+    .contact-list li,
+    .list li{
+      text-align:justify !important;
+      text-align-last:left !important;
+      text-justify:inter-word;
+    }
+
+
+    @media (max-width: 720px){
+      .wrap{
+        width:min(var(--max), calc(100% - 16px));
+        padding-inline: 6px;
+        overflow-x: clip;
+      }
+
+      .hero > div:first-child,
+      .hero > div:first-child h1,
+      .hero > div:first-child .sub,
+      .hero > div:first-child .copy,
+      .plain-lines,
+      .plain-lines p,
+      .section-intro,
+      .demo-intro{
+        width:100%;
+        max-width:100%;
+        text-align:left !important;
+        text-align-last:left !important;
+        text-justify:auto !important;
+        overflow-wrap:anywhere;
+        word-break:normal;
+        hyphens:auto;
+      }
+
+      .copy,
+      .plain-lines p,
+      .section-intro,
+      .demo-intro{
+        padding-right:2px;
+      }
+
+      .panel,
+      .card{
+        padding:18px;
+      }
+    }
+
+
+    @media (max-width: 720px){
+      body{
+        overflow-x:hidden !important;
+      }
+
+      .wrap{
+        width:100% !important;
+        max-width:100% !important;
+        margin:0 !important;
+        padding-left:20px !important;
+        padding-right:20px !important;
+        overflow-x:hidden !important;
+      }
+
+      .nav{
+        margin-left:-20px !important;
+        margin-right:-20px !important;
+        padding-left:20px !important;
+        padding-right:20px !important;
+      }
+
+      h1{
+        font-size:clamp(31px, 5.9vw, 39px) !important;
+        line-height:1.02 !important;
+        letter-spacing:-0.045em !important;
+      }
+
+      #hero-title .hero-line-1,
+      #hero-title .hero-line-2{
+        display:block !important;
+        white-space:normal !important;
+      }
+
+      .hero > div:first-child,
+      .hero > div:first-child h1,
+      .hero > div:first-child .sub,
+      .hero > div:first-child .copy,
+      .plain-lines,
+      .plain-lines p,
+      .section-intro,
+      .demo-intro,
+      .card p,
+      .founder-copy,
+      .contact-meta,
+      .contact-list li,
+      .list li{
+        width:100% !important;
+        max-width:100% !important;
+      }
+
+      .hero > div:first-child .sub,
+      .hero > div:first-child .copy,
+      .plain-lines p,
+      .section-intro,
+      .demo-intro,
+      .card p,
+      .founder-copy,
+      .contact-meta,
+      .contact-list li,
+      .list li{
+        text-align:justify !important;
+        text-align-last:left !important;
+        text-justify:inter-word !important;
+        overflow-wrap:normal !important;
+        word-break:normal !important;
+        hyphens:none !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+      }
+
+      .panel,
+      .card{
+        padding:18px !important;
+      }
+    }
+
+
+    @media (max-width: 720px){
+      .nav{
+        width:auto !important;
+        margin-left:-20px !important;
+        margin-right:-20px !important;
+        padding-left:20px !important;
+        padding-right:20px !important;
+        border-radius:0 !important;
+      }
+
+      .nav::before{
+        left:0 !important;
+        right:0 !important;
+        width:auto !important;
+        transform:none !important;
+        border-radius:0 0 18px 18px !important;
+      }
+    }
+
+  
+
+    @media (min-width: 981px){
+      .hero > div:first-child,
+      .hero > div:first-child h1,
+      .hero > div:first-child .sub,
+      .hero > div:first-child .copy,
+      .hero > div:first-child .hero-note,
+      .plain-lines,
+      .plain-lines p,
+      .section-intro,
+      .demo-intro{
+        width:100% !important;
+        max-width:100% !important;
+      }
+
+      .hero-line-1,
+      .hero-line-2,
+      h1#hero-title,
+      h1#hero-title .hero-line-1,
+      h1#hero-title .hero-line-2{
+        white-space:normal !important;
+      }
+
+      h1#hero-title .hero-line-1,
+      h1#hero-title .hero-line-2{
+        display:inline !important;
+      }
+
+      h1#hero-title{
+        font-size:clamp(42px, 5.05vw, 74px) !important;
+        line-height:.96 !important;
+        letter-spacing:-0.048em !important;
+        max-width:100% !important;
+      }
+
+      .hero > div:first-child .sub,
+      .hero > div:first-child .copy,
+      .plain-lines p,
+      .section-intro,
+      .demo-intro{
+        text-align:justify !important;
+        text-align-last:left !important;
+        text-justify:inter-word !important;
+      }
+    }
+
+
+    @media (max-width: 980px) and (orientation: landscape){
+      h1#hero-title{
+        font-size:clamp(40px, 5vw, 60px) !important;
+        line-height:.96 !important;
+        max-width:100% !important;
+      }
+
+      h1#hero-title .hero-line-1,
+      h1#hero-title .hero-line-2{
+        display:inline !important;
+        white-space:normal !important;
+      }
+
+      .hero-line-1,
+      .hero-line-2{
+        white-space:normal !important;
+      }
+    }
+
+
+    /* Final contact identity centering override */
+    #contact .contact-identity,
+    #contact .contact-identity .mail,
+    #contact .contact-identity .contact-meta{
+      text-align:center !important;
+      text-align-last:center !important;
+      justify-content:center !important;
+      align-items:center !important;
+      width:100%;
+    }
+
+    #contact .contact-identity .contact-meta{
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    @media (min-width: 981px){
+      .founders .role{
+        display:inline-flex;
+        width:fit-content;
+        min-width:0;
+        min-height:24px;
+        padding:0 10px;
+        font-size:10px;
+        letter-spacing:.08em;
+        margin-bottom:12px;
+        white-space:nowrap;
+        align-self:flex-start;
+      }
+    }
+
+    /* Stylish bullets for descriptive section lists */
+    .plain-lines{
+      display:grid;
+      gap:14px;
+    }
+
+    .plain-lines p{
+      position:relative;
+      margin:0 !important;
+      padding-left:30px !important;
+      padding-right:0 !important;
+    }
+
+    .plain-lines p::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.68em;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      transform:translateY(-50%);
+      background:linear-gradient(135deg,var(--blue),var(--green));
+      box-shadow:
+        0 0 0 4px rgba(75,184,255,.10),
+        0 0 14px rgba(75,184,255,.24);
+    }
+
+    @media (max-width: 720px){
+      .plain-lines{
+        gap:12px;
+      }
+
+      .plain-lines p{
+        padding-left:26px !important;
+      }
+
+      .plain-lines p::before{
+        width:9px;
+        height:9px;
+        top:.72em;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1199,7 +1563,7 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div>
           <div class="kicker">Simple, cleaner, low-maintenance surfaces</div>
-          <h1 id="hero-title"><span class="hero-line-1">ClearStay - made for cleaner</span><span class="hero-line-2">surfaces.</span></h1>
+          <h1 id="hero-title"><span class="hero-line-1">ClearStay - made for</span><span class="hero-line-2"> cleaner surfaces.</span></h1>
           <p class="sub">Why do clean glass surfaces never stay clean for long? ClearStay is designed to help glass and other smooth surfaces stay cleaner for longer.</p>
           <p class="copy">ClearStay opens a new direction in surface treatment technology. Designed for easy installation on existing glass and other smooth surfaces, it helps keep them cleaner and clearer with less maintenance. With potential for use in homes, commercial spaces, vehicles, and specialized applications, ClearStay represents a smarter step forward for everyday surfaces.</p>
 
@@ -1240,11 +1604,12 @@
 
       <section class="section" id="what-it-is" aria-labelledby="what-it-is-heading">
         <div class="section-kicker">What It Is</div>
+        <h2 id="what-it-is-heading">What it is.</h2>
         <div class="plain-lines">
           <p><strong>ClearStay</strong> is a surface film made for existing glass and other smooth surfaces.</p>
           <p><strong>It helps reduce water marks, dirt buildup, and repeated cleaning,</strong> so surfaces can look better for longer.</p>
           <p><strong>It is easy to add to existing surfaces,</strong> so people can improve what they already have instead of replacing it.</p>
-          <p>It can be used in everyday life, from homes and commercial spaces to vehicles and other smooth surface objects.</p>
+          <p><strong>It can be used in everyday life,</strong> from homes and commercial spaces to vehicles and other smooth surface objects.</p>
         </div>
       </section>
 
@@ -1261,7 +1626,7 @@
 
       <section class="section" id="how-it-works" aria-labelledby="how-it-works-heading">
         <div class="section-kicker">How it works</div>
-        <h2 id="how-it-works-heading"></h2>
+        <h2 id="how-it-works-heading">How it works.</h2>
         <div class="plain-lines">
           <p>After the film is applied to the glass, a small controller is installed in one corner of the surface, with several operating modes, including automatic mode. When water, dirt, or dust reaches the surface, the system activates an effect designed to help prevent buildup from lingering. It is made for long-term use, uses very little electricity, and helps keep surfaces cleaner for longer while reducing the cost of frequent cleaning.</p>
         </div>
@@ -1305,7 +1670,7 @@
             <div class="role">CEO</div>
             <h3 class="founder-name">Dmytro Smolynets</h3>
             <p class="founder-copy">
-              Dmytro Smolynets leads the business side of the company, including strategy, partnerships, communication, and growth. He focuses on turning the vision behind ClearStay into a real company with real market traction. He also brings an engineering background in Radio Electronic Devices Engineering from the National Technical University of Ukraine Kyiv Polytechnic Institute, with a Canadian equivalency of a Masters degree.
+              Dmytro Smolynets leads the business side of the company, including strategy, partnerships, communication, and growth. He focuses on turning the vision behind ClearStay into a real company with market traction. He also brings an engineering background in Radio Electronic Devices Engineering from the National Technical University of Ukraine Kyiv Polytechnic Institute, with a Canadian equivalency of a Master’s degree.
             </p>
             <ul class="strengths">
               <li>Strategy and company building</li>
@@ -1338,8 +1703,11 @@
             <div class="section-kicker">Contact</div>
             <h2 id="contact-heading">Want to learn more?</h2>
             <p class="section-intro" style="margin-top:0;">For product questions, partnership inquiries, or general interest, contact us directly.</p>
-            <a class="mail" href="mailto:info@smolarb.com?subject=ClearStay%20Glass%20Film%20Inquiry">info@smolarb.com</a>
-          <div class="contact-meta">Based in Alberta, Canada</div>
+
+            <div class="contact-identity">
+              <a class="mail" href="mailto:info@smolarb.com?subject=ClearStay%20Glass%20Film%20Inquiry">info@smolarb.com</a>
+              <div class="contact-meta">Based in Alberta, Canada</div>
+            </div>
 
             <ul class="contact-list">
               <li>General questions about ClearStay</li>
